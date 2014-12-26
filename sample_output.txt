@@ -16,7 +16,7 @@ output format:
 	"e0": {
 		"@id": "111",
 		"@in": "set",
-		"e0": "EXTRA",
+		"e0": "EXTRATEXT",
 		"e1": [
 			{
 				"@is": "pink",
