@@ -1,0 +1,38 @@
+<root>
+ <e0 id="111" in="set">EXTRATEXT
+   <e1 is="pink">Hello 1a</e1>
+   <e1 is="blue">Hello 1b</e1>
+   <e2 for="you">Hello 2</e2>
+ </e0>
+</root>
+
+
+Sample code:
+$xml = new SimpleXMLElement($xmlAbove);
+$json = json_encoder($xml);
+
+output format:
+{
+	"e0": {
+		"@id": "111",
+		"@in": "set",
+		"e1": [
+			{
+				"@is": "pink",
+				"e1": "Hello 1a"
+			},
+			{
+				"@is": "blue",
+				"e1": "Hello 1b"
+			}
+		],
+		"e2": {
+			"@for": "you",
+			"e2": "Hello 2"
+		}
+	}
+}
+
+or for test in Firebug:
+z = JSON.parse('{"e0":{"@id":"111","@in":"set","e1":[{"@is":"pink","e1":"Hello 1a"},{"@is":"blue","e1":"Hello 1b"}],"e2":{"@for":"you","e2":"Hello 2"}}}')
+
